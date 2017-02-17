@@ -170,7 +170,7 @@ func (u *Upkick) Kick(i *image.Image) (err error) {
 		}
 
 		for _, c := range hashS.Containers {
-			cont, err := u.Client.ContainerInspect(context.Background(), c)
+			cont, err := u.Client.ContainerInspectWithRaw(context.Background(), c)
 			if err != nil {
 				log.Errorf("failed to inspect container %s: %v", c, err)
 				continue
