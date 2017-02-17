@@ -4,10 +4,10 @@ import (
 	"os"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/camptocamp/upkick/handler"
+	"github.com/saimonn/upkick/handler"
 )
 
-var version = "undefined"
+var version = "0.6-reworded"
 var kicker *handler.Upkick
 
 func init() {

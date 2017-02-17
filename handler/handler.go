@@ -143,7 +143,10 @@ func (u *Upkick) Pull(i *image.Image) (err error) {
 	}
 
 	i.Hash = img.ID
-	log.Infof("Image %s has hash %v", i, i.Hash)
+	log.Infof("Image %s has ID %v", i, i.Hash)
+
+	i.Hash = img.image
+	log.Infof("Image %s has image %v", i, i.Hash)
 
 	return
 }
